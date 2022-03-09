@@ -1,0 +1,19 @@
+.login-bg {
+    background-image: url(/assets/images/flat-bg.jpg);
+    height: 44vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a#add_btn {
+    background-color: greenyellow;
+    padding: 0.8vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    position: absolute;
+    border-radius: 2vw;
+    margin-top: 20vw;
+    margin-left: 40vw;
+}

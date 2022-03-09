@@ -1,0 +1,69 @@
+.card .card-content {
+    padding: 24px;
+}
+.card .card-action:last-child, .card .card-content {
+    border-radius: 0 0 2px 2px;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+input#first_name01 {
+    margin-top: -1vw;
+}
+button.btn.cyan.waves-effect.waves-light.right {
+    background-color: antiquewhite;
+    /* margin-left: 1vw; */
+}
+input:not([type]), input[type=date]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=email]:not(.browser-default), input[type=number]:not(.browser-default), input[type=password]:not(.browser-default), input[type=search]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=text]:not(.browser-default), input[type=time]:not(.browser-default), input[type=url]:not(.browser-default), textarea.materialize-textarea {
+    font-size: 1rem;
+    box-sizing: content-box;
+    width: 100%;
+    height: 3rem;
+    margin: 0 0 8px;
+    padding: 0;
+    transition: box-shadow .3s, border .3s;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: Muli, sans-serif;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .87);
+}
+h1, h2, h3, h4, h5, h6, html {
+    font-weight: 400;
+}

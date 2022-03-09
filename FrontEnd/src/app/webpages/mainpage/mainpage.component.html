@@ -1,0 +1,47 @@
+<div class="col s12 m12 l12">
+    <div id="Form-advance" class="card card card-default scrollspy">
+      <div class="card-content">
+        <form #form="ngForm"  enctype="multipart/form-data">
+            <div class="row">
+              <div class="col m12 s12" id="act_select_option">
+                <label id="select_text">Select Fruits/Vegetables <span class="required"> *</span></label>
+                <select id="select_option"   (change)='onFruitOptionsSelected();onOptionsSelected();'  #fruit_name [(ngModel)]="fruits_txt" name="fruit_name"   class="form-control">
+                    <option [ngValue]="null" [disabled]="true">Select Fruit/Vegetable</option>
+                    <option *ngFor="let post of fruits_data" [value]="post.fruit_name">{{post.fruit_name}}</option>    
+                </select>
+            </div>
+            </div>
+            <div class="row">
+                 
+                <div class="col m6 s12"  id="act_select_option">
+                    <label id="select_text">Select Weight<span class="required"> *</span></label>
+                    <select id="select_option" #weight [(ngModel)]="weight_txt" (change)='onOptionsSelected();onFruitOptionsSelected()' name="weight" class="form-control">
+                    <option value="0.5">0.5Gram</option>
+                    <option value="1">1Kg</option>
+                    <option value="1.5">1.5Kg</option>
+                    <option value="2">2Kg</option>
+                    <option value="2.5">2.5Kg</option>
+                    <option value="3">3Kg</option>
+                  </select>
+                </div>
+                <div class="col m6 s12 file-field input-field">
+                    <label for="first_name01"> Unit Price<span class="required"> *</span></label>
+                    <input id="first_name01" #unit_price [(ngModel)]="Units_txt" name="unit_price" type="text" placeholder="Enter Unit" readonly>
+                  </div>
+            </div>
+            <div class="row">
+            <div class="col-sm-2">
+              <div class="form-actions">
+                <div class="card-body">
+                    <button type="submit" class="btn cyan waves-effect waves-light right"  (click)="this.finalsubmit();">  Submit</button>
+                </div>
+            </div>
+            </div>
+        </div>
+          </form>
+          <div class="row">
+              Total Unit Price :{{this.finalvalue}}
+            </div>
+        </div>
+      </div>
+    </div>

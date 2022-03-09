@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "3862f600-8a41-47b1-8edc-9946a209f4fa",
+		"name": "CRUD-Express Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Feed Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"DC6\",\n\t\"tech\": \"C#\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/aliens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"aliens"
+					]
+				},
+				"description": "Feed Data"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/aliens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"aliens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/aliens/610a39db265d3550c058f1f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"aliens",
+						"610a39db265d3550c058f1f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data by Id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sub\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/aliens/610a39db265d3550c058f1f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"aliens",
+						"610a39db265d3550c058f1f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Data by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/aliens/6102a9528605e827f0638840",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"aliens",
+						"6102a9528605e827f0638840"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
