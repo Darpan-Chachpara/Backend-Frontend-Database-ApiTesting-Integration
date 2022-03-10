@@ -31,27 +31,37 @@ export class MainpageComponent implements OnInit {
       console.log(this.fruits_data);
     });
   }
-  fruitpricedata:any;
-  onFruitOptionsSelected(){
-  localStorage.setItem("FruitPrice",this.fruits_data[3].unit_price);
-  console.log("&&&", this.fruits_data);
-  this.fruitpricedata=this.fruits_data[3].unit_price;
-  console.log("$$$",this.fruitpricedata);
-  this.Units_txt=0;
-  this.finalvalue=0;
-  }
-  fruitprice:any;
   onOptionsSelected(){
     this.Units_txt=0;
-    console.log(this.fruitpricedata);
+    this.fruits=this.fruits_txt;
+    this.fruit=this.fruits_txt.fruit_name
+    console.log(this.fruits);
     this.fruitprice=localStorage.getItem("FruitPrice");
-    console.log(this.weight_txt);
-    console.log( this.fruits_data[3]);
-    this.Units_txt=this.weight_txt*this.fruitpricedata;
-    console.log(this.weight_txt);
-    console.log( this.fruitpricedata);
-    console.log(this.Units_txt);
+    this.fruitpricedata=this.fruits.unit_price;
+    this.Units_txt=this.fruitpricedata;
+    // console.log(this.weight_txt);
+    // console.log( this.fruits_data[3]);
+    // this.Units_txt=this.weight_txt*this.fruitpricedata;
+    // console.log(this.weight_txt);
+    // console.log( this.fruitpricedata);
+    // console.log(this.Units_txt);
   }
+  fruitpricedata:any;
+  onFruitOptionsSelected(){
+  localStorage.setItem("FruitPrice", this.fruits.unit_price);
+  console.log(localStorage.getItem("FruitPrice"));
+  console.log("&&&", this.fruits_data);
+  this.fruitpricedata=this.fruits.unit_price;
+  this.Units_txt=this.fruitpricedata;
+  console.log("$$$",this.fruitpricedata);
+  console.log("$$$",this.Units_txt);
+  // this.Units_txt=0;
+  this.finalvalue=this.weight_txt*this.fruitpricedata;
+  }
+  fruitprice:any;
+  fruits:any;
+  fruit:any;
+ 
   finalvalue:any;
   finalsubmit(){
     this.finalvalue=this.Units_txt;

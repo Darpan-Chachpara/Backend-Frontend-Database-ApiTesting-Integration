@@ -4,18 +4,23 @@
         <form #form="ngForm"  enctype="multipart/form-data">
             <div class="row">
               <div class="col m12 s12" id="act_select_option">
-                <label id="select_text">Select Fruits/Vegetables <span class="required"> *</span></label>
-                <select id="select_option"   (change)='onFruitOptionsSelected();onOptionsSelected();'  #fruit_name [(ngModel)]="fruits_txt" name="fruit_name"   class="form-control">
+                <!-- <label id="select_text">Select Fruits/Vegetables <span class="required"> *</span></label>
+                <select id="select_option"   #fruit_name [(ngModel)]="fruits_txt" name="fruit_name" (click)='onFruitOptionsSelected();onOptionsSelected(this.fruits_txt);' class="form-control">
                     <option [ngValue]="null" [disabled]="true">Select Fruit/Vegetable</option>
-                    <option *ngFor="let post of fruits_data" [value]="post.fruit_name">{{post.fruit_name}}</option>    
-                </select>
+                    <option *ngFor="let post of fruits_data" appendTo="body" [value]="post" >{{post.fruit_name}}</option>    
+                </select> -->
+                <label id="select_text">Select Fruits </label>
+                <ng-select #fruit_name [(ngModel)]="fruits_txt" name="fruit_name" (change)='onOptionsSelected();' placeholder="Select Fruits" >
+                  <ng-option  *ngFor="let post of fruits_data"  appendTo="body" [value]="post">{{post.fruit_name}}</ng-option>
+               </ng-select>
+
             </div>
             </div>
             <div class="row">
                  
                 <div class="col m6 s12"  id="act_select_option">
                     <label id="select_text">Select Weight<span class="required"> *</span></label>
-                    <select id="select_option" #weight [(ngModel)]="weight_txt" (change)='onOptionsSelected();onFruitOptionsSelected()' name="weight" class="form-control">
+                    <select id="select_option" #weight [(ngModel)]="weight_txt" (change)="onFruitOptionsSelected();" name="weight" class="form-control">
                     <option value="0.5">0.5Gram</option>
                     <option value="1">1Kg</option>
                     <option value="1.5">1.5Kg</option>
